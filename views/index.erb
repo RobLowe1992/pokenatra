@@ -1,0 +1,6 @@
+<h1 class="title">Pokedex</h1>
+<ul class="containareon">
+    <% @pokemon.each do |poke|%>
+    <li><div class="pokemon"><div class="poke-header"><span class="poke-name"><%= poke.name %></span><span class="poke-cp"><span class="poke-cp-text">CP</span><%= poke.cp %></span></div><div><img src="<%= poke.img_url %>"></div><div><span class="poke-type">Type: <%= poke.poke_type %></span></div><div></li>
+    <% end %>
+</ul>

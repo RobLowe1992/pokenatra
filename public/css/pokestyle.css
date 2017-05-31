@@ -1,7 +1,3 @@
-/*
-
-Uncomment for sick pokestyle
-
 @font-face {
   font-family: "Pokemon";
   src: url(../fonts/PokemonSolid.ttf) format("truetype");
@@ -29,6 +25,12 @@ a:hover {
   padding: 20px;
   animation: pulse 1s infinite;
 }
+div {
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
 .containareon, h1 {
   box-sizing: border-box;
   padding: 10px;
@@ -38,7 +40,14 @@ a:hover {
   text-align: center;
   justify-content: center;
 }
-
+input[type="text"] {
+  font-size: 25px;
+  min-height: 25px;
+  min-width: 40px;
+  position: relative;
+  float: right;
+  right: 5px;
+}
 .pokemon{
   min-width: 375px;
   background-color: rgb(255, 255, 255);
@@ -51,6 +60,30 @@ a:hover {
   border-left-color: rgba(255, 0, 0, .5);
   border-right-color: rgba(225, 225, 225, .5);
   border-bottom-color: rgba(225, 225, 225, .5);
+}
+.poke-name {
+  width: 50%;
+  margin-right: 10%;
+}
+.poke-header {
+  width: 100%;
+}
+.poke-cp {
+  width: 50%;
+  color: red;
+}
+.poke-cp-text {
+  font-size: .6em;
+  justify-content: center;
+}
+.poke-type {
+  font-size: .8em;
+}
+.title {
+  color: black;
+}
+.text-center {
+  text-align: center;
 }
 
 @keyframes pulse {
@@ -70,4 +103,4 @@ a:hover {
     text-shadow: 4px 4px 3px rgba(255, 0, 0, .3);
     background-color: rgba(0, 0, 0, .1);
   }
-}*/
+}
