@@ -1,0 +1,11 @@
+<div class="containareon">
+    <h2 class="trans-bgrd"><span class="poke-name"><%= @pokemon.name %></span><span class="poke-cp-text">CP</span><%= @pokemon.cp %></h2>
+    <img class="trans-bgrd poke-pic" src="<%= @pokemon.img_url %>">
+    <h3>Type: <%= @pokemon.poke_type %></h3>
+    <a class="delete" href="/<%= @pokemon.id %>/edit">Edit</a>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="<%= url("js/feature.js") %>"></script>

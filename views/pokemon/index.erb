@@ -1,0 +1,11 @@
+<h1 class="title">Pokedex</h1>
+<ul class="containareon">
+    <% @pokemon.each do |poke|%>
+    <li><div class="pokemon"><div class="poke-header"><h2><%= poke.name %></h2><h3>CP <%= poke.cp %></h3></div><div><img src="<%= poke.img_url %>"></div><div><h3><span class="poke-type">Type: <%= poke.poke_type %></span></h3></div><div></li>
+    <% end %>
+</ul>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="<%= url("js/index.js") %>"></script>

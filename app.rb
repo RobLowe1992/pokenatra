@@ -6,17 +6,46 @@ require "pry"
 
 require_relative "db/connection"
 require_relative "models/pokemon"
-
+# Read all pokemon
 get '/' do
     @pokemon = Pokemon.all
-    erb :index
+    erb :'pokemon/index'
 end
 
-get '/addNew' do
-    erb :addNew
-end
+#-----Routes-----
 
+# Form for Creating
+get '/new' do
+    erb :'pokemon/new'
+end
+# Create new pokemon
 post '/' do
-    @pokemon = Pokemon.create(name: params[:name], cp: params[:cp], poke_type: params[:poke_type], img_url: params[:img])
+    @pokemon = Pokemon.create(params[:pokemon])
+    redirect "/#{@pokemon.id}"
+end
+
+# Personal Pokemon page
+get '/:id' do
+    @pokemon = Pokemon.find(params[:id])
+    erb :'pokemon/show'
+end
+
+# Form to edit pokemon
+get '/:id/edit' do
+    @pokemon = Pokemon.find(params[:id])
+    erb :'pokemon/edit'
+end
+
+# Edit pokemon
+put '/:id' do
+    @pokemon = Pokemon.find(params[:id])
+    @pokemon.update(params[:pokemon])
+    redirect "/#{@pokemon.id}"
+end
+
+# Destroy pokemon from database
+delete '/:pokemon' do
+    @pokemon = Pokemon.find_by(:name => params[:pokemon])
+    @pokemon.destroy
     redirect '/'
 end

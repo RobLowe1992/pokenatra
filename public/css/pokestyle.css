@@ -40,6 +40,12 @@ ul {
   text-align: center;
   justify-content: center;
 }
+.delete {
+  background: red;
+  width: 300px;
+  margin: 0 auto;
+  cursor: pointer;
+}
 input[type="text"] {
   font-size: 25px;
   min-height: 25px;
@@ -47,6 +53,9 @@ input[type="text"] {
   position: relative;
   float: right;
   right: 5px;
+}
+.trans-bgrd {
+  background-color: transparent;
 }
 .pokemon{
   min-width: 375px;
@@ -65,12 +74,15 @@ input[type="text"] {
   width: 50%;
   margin-right: 10%;
 }
+.poke-pic {
+  width: 300px;
+  margin-top: 20px;
+}
 .poke-header {
   width: 100%;
 }
 .poke-cp {
   width: 50%;
-  color: red;
 }
 .poke-cp-text {
   font-size: .6em;
