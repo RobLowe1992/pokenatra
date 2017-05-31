@@ -59,6 +59,12 @@ input[type="text"] {
   float: right;
   right: 5px;
 }
+.add-new {
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+
+}
 .trans-bgrd {
   background-color: transparent;
 }

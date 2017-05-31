@@ -44,8 +44,8 @@ put '/:id' do
 end
 
 # Destroy pokemon from database
-delete '/:pokemon' do
-    @pokemon = Pokemon.find_by(:name => params[:pokemon])
+delete '/:id' do
+    @pokemon = Pokemon.find(params[:id])
     @pokemon.destroy
     redirect '/'
 end

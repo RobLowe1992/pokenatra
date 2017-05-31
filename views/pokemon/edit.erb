@@ -14,6 +14,9 @@
         <input type="text" class="inputs" name="pokemon[img_url]" value="<%= @pokemon.img_url %>">
         <br>
         <input type="submit" value="Save">
-        <a class="delete" style="display: block" href="">Delete</a>
+    </form>
+    <form action="/<%= @pokemon.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete">
     </form>
 </div>
