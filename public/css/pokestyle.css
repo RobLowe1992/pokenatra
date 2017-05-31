@@ -11,7 +11,9 @@ a, p, h2, h3 {
   border-radius: 100px;
 }
 
-
+input[type="submit"] {
+  font-size: 20px;
+}
 body {
   background-image: url(../images/pokedex.png);
   background-attachment: fixed;
@@ -41,10 +43,13 @@ ul {
   justify-content: center;
 }
 .delete {
+  display: inline-block;
   background: red;
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
   cursor: pointer;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 input[type="text"] {
   font-size: 25px;
